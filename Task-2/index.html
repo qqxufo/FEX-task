@@ -4,106 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Task-2</title>
-    <style type="text/css">
-    * {
-        font-family: "Microsoft YaHei" ! important;
-        margin: 0;
-        padding: 0;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-
-    h1,h2,h3,h4,h5,h6,p{
-        margin: 15px 0;
-    }
-
-    h1 {
-        font-size: 22px;
-    }
-
-    h2 {
-        font-size: 18px;
-        color: #74706f;
-    }
-    
-    .article_des{
-        font-size: 10px;
-        color: #74706f;
-    }
-
-    body{
-        min-width: 600px;
-    }
-
-    /*header*/ 
-    header {
-        background: #222;
-        height: 60px;
-        position: relative;
-    }
-
-    /*logo*/
-    .logo {
-        position: relative;
-    }
-    
-    .logo img {
-        position: absolute;
-        top: 10px;
-        left: 40px;
-        border: 0;
-        height: 410;
-        width: 167;
-    }
-
-    /*nav*/
-    nav {
-        position: absolute;
-        top: 23px;
-        right: 20px;
-        font-size: 13px;
-    }
-    
-    nav ul {
-        list-style: none;
-    }
-    
-    nav li {
-        display: inline;
-        margin-right: 10px;
-    }
-    
-    nav li a {
-        color: #f5fefb;
-        text-decoration: none;
-    }
-    
-    nav .active a {
-        color: #aca7ab;
-    }
-
-    /*main*/  
-    main {
-        background: #dedede;
-        padding: 1px;
-    }
-
-    /*article*/   
-    article {
-        background: #fff;
-        margin: 20px;
-        padding: 20px;
-        border-left: 1px solid #cdcdcd;
-        border-top: 1px solid #cdcdcd;
-        border-right: 3px solid #848484;
-        border-bottom: 3px solid #848484;
-    }
-    article img{
-        width: 300px;
-        height: 250px;
-    }
-    </style>
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body>
@@ -141,29 +42,38 @@
                 <li>项目列表二</li>
                 <li>项目列表三</li>
             </ul>
-            <h2>图片</h2>
-            <ul style="list-style:none">
-                <li>
+        </article>
+        <article>
+            <h1>图片</h1>
+                <figure>
                     <p>好看的图片</p>
                     <img src="http://n.sinaimg.cn/sports/transform/20160315/v1Id-fxqhmvp6213873.jpg" alt="">
-                </li>
-                <li>
+                </figure>
+            
+                <figure>
                     <p>好看的图片</p>
                     <img src="http://n.sinaimg.cn/sports/transform/20160315/v1Id-fxqhmvp6213873.jpg" alt="">
-                </li>
-                <li>
+                </figure>
+            
+                <figure>
                     <p>好看的图片</p>
                     <img src="http://n.sinaimg.cn/sports/transform/20160315/v1Id-fxqhmvp6213873.jpg" alt="">
-                </li>
-                <li>
+                </figure>
+            
+                <figure>
                     <p>好看的图片</p>
                     <img src="http://n.sinaimg.cn/sports/transform/20160315/v1Id-fxqhmvp6213873.jpg" alt="">
-                </li>
-                <li>
+                </figure>
+            
+                <figure>
                     <p>好看的图片</p>
                     <img src="http://n.sinaimg.cn/sports/transform/20160315/v1Id-fxqhmvp6213873.jpg" alt="">
-                </li>
-            </ul>
+                </figure>
+          
+                <figure>
+                    <p>好看的图片</p>
+                    <img src="http://n.sinaimg.cn/sports/transform/20160315/v1Id-fxqhmvp6213873.jpg" alt="">
+                </figure>
         </article>
         <article>
             <h1>最后一篇文章的一级标题</h1>
@@ -175,7 +85,7 @@
                 <li>排名3</li>
             </ol>
             <p>下面是一个表格，给表格加了一个border="1"好让你看出这是一个表格</p>
-            <table border="1">
+            <table class="article-table">
                 <tr>
                     <th>表头</th>
                     <th>表头</th>
@@ -207,38 +117,69 @@
                     </td>
                     <td colspan="2">1000</td>
                 </tr>
-            </table>
-            <h1>这里以后是一个侧边栏,这是侧栏的标题</h1>
-            <h2>侧栏注册窗口标题</h2>
-            <form>
-                <label for="email">请输入邮箱地址:</label>
-                <input type="text" name="email" placeholder="这是一个文本输入框">
-                <p>邮件地址请按要求格式输入</p>
-                <label for="pwd">请输入密码:</label>
-                <input type="password" name="pwd" placeholder="这是一个文本输入框">
-                <label for="repwd">请重复输入密码:</label>
-                <input type="password" name="repwd" placeholder="这是一个文本输入框">
-                <p>密码请为6-16位英文数字</p>
-                <label for="sex">性别:</label>
-                <input type="radio" name="sex" value="male" /> 男
-                <input type="radio" name="sex" value="female" /> 女
-                <label for="city">城市:</label>
-                <select name="city">
-                    <option value="beijin">北京</option>
-                    <option value="liuzhou">柳州</option>
-                    <option value="ningbo">宁波</option>
-                </select>
-                <label for="hobby">爱好:</label>
-                <input type="checkbox" value="sports" value="hobby">运动
-                <input type="checkbox" value="art" value="hobby">艺术
-                <input type="checkbox" value="science" value="hobby">科学
-                <label for="description">个人描述:</label>
-                <textarea name="description">这是一个多行输入框，输入您的个人描述</textarea>
-                <input type="button" value="确认提交">
-            </form>
+            </table>       
         </article>
+        <aside>
+             <h1 class="sidebar">这里以后是一个侧边栏,这是侧栏的标题</h1>
+            <form class="aside-form">
+                <table class="aside-table">
+                    <tr>
+                        <td class="left-td"><label for="email">请输入邮箱地址:</label></td>
+                        <td><input type="text" name="email" placeholder="这是一个文本输入框"></td>                       
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><span class="err-msg">邮件地址请按要求格式输入</span></td>
+                    </tr>
+                    <tr>
+                        <td class="left-td"><label for="pwd">请输入密码:</label></td>
+                        <td><input type="password" name="pwd" placeholder="这是一个文本输入框"></td>
+                    </tr>
+                    <tr>
+                        <td class="left-td"><label for="repwd">请重复输入密码:</label></td>
+                        <td><input type="password" name="repwd" placeholder="这是一个文本输入框"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><span class="err-msg">密码请为6-16位英文数字</span></td>
+                    </tr>
+                    <tr>
+                        <td class="left-td"><label for="sex">性别:</label></td>
+                        <td>
+                            <input type="radio" name="sex" value="male" checked="" /> 男
+                            <input type="radio" name="sex" value="female" /> 女
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left-td"><label for="city">城市:</label></td>
+                        <td>
+                             <select name="city">
+                                <option value="beijin">北京</option>
+                                <option value="liuzhou">柳州</option>
+                                <option value="ningbo">宁波</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left-td"><label for="hobby">爱好:</label></td>
+                        <td>
+                            <input type="checkbox" value="sports" value="hobby">运动
+                            <input type="checkbox" value="art" value="hobby">艺术
+                            <input type="checkbox" value="science" value="hobby">科学                       
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left-td"><label for="description">个人描述:</label></td>
+                        <td><textarea name="description" cols="80" rows="5">这是一个多行输入框，输入您的个人描述</textarea></td>
+                    </tr>         
+                </table>
+                <input type="button" class="btn"  value="确认提交">
+            </form>
+        </aside>
     </main>
-    <footer>版权所有&copy;</footer>
+    <footer>
+        <span class="copy-desc">版权所有&copy;</span>
+    </footer>
 </body>
 
 </html>
