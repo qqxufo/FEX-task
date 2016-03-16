@@ -4,22 +4,127 @@
 <head>
     <meta charset="UTF-8">
     <title>Task-2</title>
+    <style type="text/css">
+    * {
+        font-family: "Microsoft YaHei" ! important;
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    h1,h2,h3,h4,h5,h6,p{
+        margin: 15px 0;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+        color: #74706f;
+    }
+    
+    .article_des{
+        font-size: 10px;
+        color: #74706f;
+    }
+
+    body{
+        min-width: 600px;
+    }
+
+    /*header*/ 
+    header {
+        background: #222;
+        height: 60px;
+        position: relative;
+    }
+
+    /*logo*/
+    .logo {
+        position: relative;
+    }
+    
+    .logo img {
+        position: absolute;
+        top: 10px;
+        left: 40px;
+        border: 0;
+        height: 410;
+        width: 167;
+    }
+
+    /*nav*/
+    nav {
+        position: absolute;
+        top: 23px;
+        right: 20px;
+        font-size: 13px;
+    }
+    
+    nav ul {
+        list-style: none;
+    }
+    
+    nav li {
+        display: inline;
+        margin-right: 10px;
+    }
+    
+    nav li a {
+        color: #f5fefb;
+        text-decoration: none;
+    }
+    
+    nav .active a {
+        color: #aca7ab;
+    }
+
+    /*main*/  
+    main {
+        background: #dedede;
+        padding: 1px;
+    }
+
+    /*article*/   
+    article {
+        background: #fff;
+        margin: 20px;
+        padding: 20px;
+        border-left: 1px solid #cdcdcd;
+        border-top: 1px solid #cdcdcd;
+        border-right: 3px solid #848484;
+        border-bottom: 3px solid #848484;
+    }
+    article img{
+        width: 300px;
+        height: 250px;
+    }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1>网站一级标题</h1>
-        <ul>
-            <li><a href="#">导航链接一</a></li>
-            <li><a href="#">导航链接二</a></li>
-            <li><a href="#">导航链接三</a></li>
-            <li><a href="#">导航链接四</a></li>
-        </ul>
+        <div class="logo">
+            <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_ca79a146.png" alt="百度前端学院">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">导航链接一</a></li>
+                <li><a href="#">导航链接二</a></li>
+                <li><a href="#">导航链接三</a></li>
+                <li class="active"><a href="#">导航链接四</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <article>
             <h1>文章一级标题</h1>
             <h2>文章二级标题</h2>
+            <p class="article_des">文章作者 文章发表时间</p>
             <p>新浪体育讯　　3月15日，谷歌阿尔法围棋与李世石的人机大战五番棋第5局在韩国四季酒店战罢，李世石执黑中盘落败，双方比分最终定格为阿尔法4比1取胜。赛后新闻发布会李世石的第一句就是“很抱歉！今天非常可惜。”</p>
             <p>李世石说：“本来想留下个好结尾，但没有。前半盘有些优势，但最后还是输掉了。可见我还是有些不足，个人来说非常可惜。第三局结束时我也说过，这是我的失败，不是人类的失败，我还有很多不足，之后会更加努力，让大家看到更好的李世石。非常感谢大家。”</p>
             <img src="http://n.sinaimg.cn/sports/transform/20160315/v1Id-fxqhmvp6213873.jpg" alt="">
@@ -27,7 +132,7 @@
         <article>
             <h1>另一篇文章一级标题</h1>
             <h2>文章二级标题</h2>
-            <p>文章作者 文章发表时间</p>
+            <p class="article_des">文章作者 文章发表时间</p>
             <p>新浪体育讯　　3月15日，谷歌阿尔法围棋与李世石的人机大战五番棋第5局在韩国四季酒店战罢，李世石执黑中盘落败，双方比分最终定格为阿尔法4比1取胜。赛后新闻发布会李世石的第一句就是“很抱歉！今天非常可惜。”</p>
             <p>李世石说：“本来想留下个好结尾，但没有。前半盘有些优势，但最后还是输掉了。可见我还是有些不足，个人来说非常可惜。第三局结束时我也说过，这是我的失败，不是人类的失败，我还有很多不足，之后会更加努力，让大家看到更好的李世石。非常感谢大家。”</p>
             <img src="http://n.sinaimg.cn/sports/transform/20160315/v1Id-fxqhmvp6213873.jpg" alt="">
@@ -63,7 +168,7 @@
         <article>
             <h1>最后一篇文章的一级标题</h1>
             <h2>文章二级标题</h2>
-            <p>文章作者 文章发表时间</p>
+            <p class="article_des">文章作者 文章发表时间</p>
             <ol>
                 <li>排名1</li>
                 <li>排名2</li>
