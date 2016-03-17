@@ -28,7 +28,7 @@ h2 {
 }
 
 body {
-    min-width: 600px;
+    min-width: 800px;
 }
 
 ul {
@@ -42,6 +42,7 @@ ol {
 
 /*header footer*/ 
 header, footer{
+    width: 100%;
     background: #222;
     height: 60px;
     position: relative;
@@ -102,10 +103,11 @@ nav .active a {
 main {
     background: #dedede;
     padding: 1px;
+    overflow: auto;
 }
 
 /*article aside*/   
-article, aside{
+article{
     background: #fff;
     margin: 20px;
     padding: 20px;
@@ -114,19 +116,34 @@ article, aside{
     border-right: 3px solid #848484;
     border-bottom: 3px solid #848484;
 }
+
+aside{
+    background: #fff;
+    margin:  20px 20px 20px 0;
+    padding: 20px;
+    border-left: 1px solid #cdcdcd;
+    border-top: 1px solid #cdcdcd;
+    border-right: 3px solid #848484;
+    border-bottom: 3px solid #848484;
+}
+
 article img{
     width: 300px;
     height: 250px;
 }
 
 /*figure*/
+.figure-article{
+    overflow: auto;
+}
+
 figure {
     width: 130px;
     height: 130px;
     border: 1px solid #ccc;
     text-align: center;
-    margin-top: 20px;
-    margin-left: 40px;
+    float: left;
+    margin: 10px;
 }
 
 figure p{
@@ -160,31 +177,43 @@ figure img{
     background: #ccc;
  }
 
+/*left && right*/
+.left {
+    float: left;
+    margin-right: 400px;
+}
+
+.right {
+    width: 400px;
+    float: left;
+    margin-left: -400px;
+}
+
 /*aside*/
 .sidebar {
     border-left: 3px solid #ccc;
     padding: 10px;
+    font-size: 18px;
 }
 
-/*aside table*/
-.aside-table {
-    margin: 0 auto;
-}
-
-.aside-table td {
-     border: none;
-}
-
-.aside-table .err-msg {
+.err-msg {
     color: #ccc;
     font-size: 14px;
 }
 
-.aside-table .left-td{
+.aside-table tr,td {
+    border: none;
+}
+
+.aside-table .left-td {
     text-align: right;
 }
 
-aside .btn{
+.aside-table textarea {
+    width: 100%
+}
+
+.btn{
     width: 100%;
     background: #3355d0;
     border-radius: 10px;
