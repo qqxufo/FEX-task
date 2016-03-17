@@ -104,6 +104,7 @@ main {
     background: #dedede;
     padding: 1px;
     overflow: auto;
+	zoom: 1;
 }
 
 /*article aside*/   
