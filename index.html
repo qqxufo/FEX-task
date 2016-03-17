@@ -1,15 +1,39 @@
 ﻿<!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
     <meta charset="UTF-8">
     <title>Task-Menu</title>
+    <style type="text/css">
+        ul {
+            list-style: none;
+        }
+    </style>
+    <script type="text/javascript">
+    function createLink(num) {
+        var content, a, ul, li;
+        content = document.getElementById('content');
+        ul = document.createElement('ul');
+        for (var i = 1; i <= num; i++) {
+            li = document.createElement('li');
+            a = document.createElement('a');
+            a.href = 'Task-' + i + '/index.html';
+            a.appendChild(document.createTextNode('任务' + i));
+            li.appendChild(a);
+            ul.appendChild(li);
+        }
+        content.appendChild(ul);
+    }
+
+    window.onload = function() {
+        createLink(5);
+    }
+    </script>
 </head>
+
 <body>
-    <ul>
-        <li><a href="Task-1/index.html">任务1</a></li>
-        <li><a href="Task-2/index.html">任务2</a></li>
-        <li><a href="Task-3/index.html">任务3</a></li>
-        <li><a href="Task-4/index.html">任务4</a></li>
-    </ul>
+    <div id="content">
+    </div>
 </body>
+
 </html>
