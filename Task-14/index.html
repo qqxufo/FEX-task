@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 02</title>
+</head>
+
+<body>
+    <h3>污染城市列表</h3>
+    <ul id="aqi-list">
+    </ul>
+    <script type="text/javascript">
+    var aqiData = [
+        ["北京", 90],
+        ["上海", 50],
+        ["福州", 10],
+        ["广州", 50],
+        ["成都", 90],
+        ["西安", 100]
+    ];
+
+    (function() {
+        var aqi_list = document.getElementById('aqi-list'),
+            num = ['一', '二', '三', '四', '五', '六', '七'],
+            li, desc, data;
+
+        // 排序
+        aqiData.sort(function(a, b) {
+            return b[1] - a[1];
+        });
+
+        // 遍历数组筛选符合条件的值
+        for (var i = 0; i < aqiData.length; i++) {
+            if (aqiData[i][1] > 60) {
+                desc = '第' + num[i] + '名：' + aqiData[i][0] + '，' + aqiData[i][1];
+                li = document.createElement('li');
+                li.appendChild(document.createTextNode(desc));
+                aqi_list.appendChild(li);
+            }
+        }
+    })();
+    </script>
+</body>
+
+</html>
