@@ -1,0 +1,14 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#game-map {
+    display: block;
+    background: #ccc;
+}
+
+.control {
+    margin: 10px;
+}
