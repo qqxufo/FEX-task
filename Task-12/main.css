@@ -1,4 +1,15 @@
-﻿.table-striped th {
+﻿* {
+    font-family: "Microsoft YaHei" ! important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    margin: 10px;
+}
+
+.table-striped th {
     background: #000;
     color: #fff;
 }
@@ -7,11 +18,12 @@
     counter-reset: rowNum;
 }
 
-.table-striped th,td {
+.table-striped th,
+td {
     padding: 5px 10px;
 }
 
-.table-striped tbody tr :first-child:before {
+.table-striped tbody td:first-child:before {
     counter-increment: rowNum;
     content: counter(rowNum) ".";
 }
@@ -28,4 +40,74 @@
 tr:nth-child(2),
 tr:nth-child(3) {
     color: red;
+}
+
+.magic-input {
+    width: 150px;
+    transition: width 1s;
+}
+
+.magic-input:focus {
+    width: 200px;
+}
+
+.slider {
+    width: 200px;
+    height: 150px;
+    position: absolute;
+}
+
+.slider .content li {
+    width: 200px;
+    height: 150px;
+    list-style: none;
+    position: absolute;
+    float: left;
+    margin-left: -220px;
+}
+
+.slider .content li:target {
+    margin-left: 0;
+    transition: margin 0.3s ease-in-out;
+}
+
+.slider .content li:nth-child(1) {
+    background: #ECF752;
+}
+
+.slider .content li:nth-child(2) {
+    background: #79E8D0;
+}
+
+.slider .content li:nth-child(3) {
+    background: #FFB8B8;
+}
+
+.slider .content li:nth-child(4) {
+    background: #86E65A;
+}
+
+.slider .content li:nth-child(5) {
+    background: #24D197;
+}
+
+.slider .btns {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.slider .btns li {
+    float: left;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: 1px;
+}
+
+.slider .btns li a {
+    color: #fff;
+    text-decoration: none
 }

@@ -51,6 +51,7 @@
     // 绘制小方块
     // direction: 1:左,2:上,3:右,4:下
     function drawRect(x, y, direction) {
+
         // 绘制方块体
         ctx.fillStyle = '#37ACCB';
         ctx.fillRect(x * 50, y * 50, 50, 50);
@@ -71,6 +72,10 @@
                 ctx.fillRect(x * 50, y * 50 + 35, 50, 15);
                 break;
         }
+
+        // 绘制边框
+        ctx.fillStyle = '#fff';
+        ctx.strokeRect(x * 50, y * 50, 50, 50);
     }
 
     // 渲染游戏场景
